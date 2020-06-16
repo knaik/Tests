@@ -1,0 +1,308 @@
+~
+$ cd Documents/
+
+
+~/Documents (master)
+$ ls
+ 
+~/Documents (master)
+$ cd Experiments/
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ git init
+Reinitialized existing Git repository in 
+C:/Users/username/Documents/Experiments/.git/
+
+~/Documents/Experiments (master)
+$ git remote add master https://github.com/knaik/repo.got
+
+~/Documents/Experiments (master)
+$ git remote add master https://github.com/knaik/repo.git
+fatal: remote master already exists.
+
+~/Documents/Experiments (master)
+$ rm -rf ./git
+
+~/Documents/Experiments (master)
+$ git remote add master https://github.com/knaik/repo.git
+fatal: remote master already exists.
+
+~/Documents/Experiments (master)
+$ ^C
+
+~/Documents/Experiments (master)
+$ rm -rf ./
+rm: refusing to remove '.' or '..' directory: skipping './'
+
+~/Documents/Experiments (master)
+$ rm -rf *.*
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ git remote add master  https://github.com/knaik/repo.git
+fatal: remote master already exists.
+
+~/Documents/Experiments (master)
+$ git remote add origin  https://github.com/knaik/repo.git
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ vim tutor.txt
+
+~/Documents/Experiments (master)
+$ git add .
+warning: LF will be replaced by CRLF in tutor.txt.
+The file will have its original line endings in your working directory.
+
+~/Documents/Experiments (master)
+$ git push -m "notes repo"
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+~/Documents/Experiments (master)
+$ git push -m "notes repo"
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+~/Documents/Experiments (master)
+$ git commit -m "notes repo"
+[master (root-commit) bc904b8] notes repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tutor.txt
+
+~/Documents/Experiments (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+~/Documents/Experiments (master)
+$ git push --set-upstream origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/knaik/repo.git/' not found ## the issue was that the repo should be name my actual repo
+
+~/Documents/Experiments (master)
+$ git push --set-upstream origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/knaik/repo.git/' not found
+
+~/Documents/Experiments (master)
+$ git remote add origin  https://github.com/knaik/Experiments.git
+fatal: remote origin already exists.
+
+~/Documents/Experiments (master)
+$ gir rm -rf *.*
+bash: gir: command not found
+
+~/Documents/Experiments (master)
+$  rm -rf *.*
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ git remote add origin  https://github.com/knaik/Experiments.git
+fatal: remote origin already exists.
+
+~/Documents/Experiments (master)
+$ git init
+Reinitialized existing Git repository in 
+C:/Users/username/Documents/Experiments/.git/
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ git remote add origin https://github.com/knaik/Experiments.git
+fatal: remote origin already exists.
+
+~/Documents/Experiments (master)
+$ git remote origin
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] 
+[--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | 
+<remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+~/Documents/Experiments (master)
+$ git remote rm  origin
+
+~/Documents/Experiments (master)
+$ git remote add origin https://github.com/knaik/Experiments.git
+
+~/Documents/Experiments (master)
+$ ls
+
+~/Documents/Experiments (master)
+$ nano
+
+~/Documents/Experiments (master)
+$ 
+-----------------------------------------------------------------------------------------------------------------
+
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ rm -r ./git
+rm: cannot remove './git': No such file or directory
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ ls
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ ls -a
+./  ../  .git/
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ rm ./gir
+rm: cannot remove './gir': No such file or directory
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ rm ./git
+rm: cannot remove './git': No such file or directory
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ rm
+rm: missing operand
+Try 'rm --help' for more information.
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ start x
+The system cannot find the file x.
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ start .
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git init
+Initialized empty Git repository in C:/Users/username/Documents/Experiments/.git/
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ $ git remote add origin https://github.com/knaik/Experiments.git
+bash: $: command not found
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git add .
+warning: LF will be replaced by CRLF in uncleaned.txt.
+The file will have its original line endings in your working directory.
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git commit -m "learning advanaced git"
+[master (root-commit) 0758933] learning advanaced git
+ 1 file changed, 229 insertions(+)
+ create mode 100644 uncleaned.txt
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git remote add origin https://github.com/knaik/Experiments.git
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git push --set-upstream origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.66 KiB | 1.66 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/knaik/Experiments.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+username@model MINGW64 ~/Documents/Experiments (master)
+$ git push --set-upstream origin master
+
