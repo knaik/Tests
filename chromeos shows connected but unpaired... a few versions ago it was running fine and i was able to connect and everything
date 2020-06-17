@@ -1,0 +1,32 @@
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[Sony PLAYSTATION(R)3 Controller]# info E0:AE:5E:96:44:05 
+Device E0:AE:5E:96:44:05 (public)
+        Name: Sony PLAYSTATION(R)3 Controller
+        Alias: Sony PLAYSTATION(R)3 Controller
+        Class: 0x00000508
+        Icon: input-gaming
+        Paired: no
+        Trusted: yes
+        Blocked: no
+        Connected: yes
+        WakeCapable: yes
+        LegacyPairing: no
+        UUID: Human Interface Device... (00001124-0000-1000-8000-00805f9b34fb)
+        UUID: PnP Information           (00001200-0000-1000-8000-00805f9b34fb)
+        Modalias: usb:v054Cp0268d0100
+        Type: BR/EDR
+[Sony PLAYSTATION(R)3 Controller]# 
+
+
+
+localhost ~ # bluetoothctl
+Agent registered
+[Sony PLAYSTATION(R)3 Controller]# list
+Controller A0:AF:BD:4E:D3:82 Chromebook_43FB [default]
+[Sony PLAYSTATION(R)3 Controller]# show controller_mac_address
+Controller controller_mac_address not available
+[Sony PLAYSTATION(R)3 Controller]# power on
+Changing power on succeeded
+[Sony PLAYSTATION(R)3 Controller]# show controller_mac_address
+Controller controller_mac_address not available
+[Sony PLAYSTATION(R)3 Controller]# 
