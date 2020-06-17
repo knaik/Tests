@@ -1,0 +1,33 @@
+[S1;39m[agent] Enter PIN code: 1234
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: no
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.InProgress
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: yes
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: no
+[CHG] Device E0:AE:5E:96:44:05 ServicesResolved: no
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[bluetooth]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[CHG] Device E0:AE:5E:96:44:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: yes
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: no
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Request PIN code
+[S1;39m[agent] Enter PIN code: 0000
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[bluetooth]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[bluetooth]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.ConnectionAttemptFailed
+[bluetooth]# 
