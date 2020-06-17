@@ -1,0 +1,206 @@
+So Chromeos has an underlying architecture of Gentoo... and I learned it's using bluez for bluetooth.
+
+I spent 3 hours figuring out why my dualshock 3 controller wasn't pairing when it has paired in the past and came across this blurb"
+
+"Troubleshooting
+Imitation DualShock 3 controllers are not supported by BlueZ and will not work via Bluetooth[6]. However, Linux 4.15[7] and BlueZ 5.48[8] will have full support for imitation DualShock 3 controllers via USB and Bluetooth.
+External resources"
+
+Note that I do not have an imitation dual shock 3 controller. and it works fine via usb. but even the regular one does not support bluetooth.
+I do not blame Gentoo. I blame chromeos.
+
+The following is random bash output to remember what i have tried and it still hasn't worked.
+https://wiki.gentoo.org/wiki/Sony_DualShock
+
+Pro Tip] Use 'Open as Window' or 'Fullscreen' to prevent Ctrl+W from closing your terminal!
+[Pro Tip] See [crosh] for more information.
+
+Loading extra module: /usr/share/crosh/dev.d/50-crosh.sh
+Welcome to crosh, the Chrome OS developer shell.
+
+If you got here by mistake, don't panic!  Just close this tab and carry on.
+
+Type 'help' for a list of commands.
+
+If you want to customize the look/behavior, you can use the options page.
+Load it by using the Ctrl+Shift+P keyboard shortcut.
+
+crosh> shell
+chronos@localhost / $ sudo su -
+Password: 
+localhost ~ # bluetoothctl
+Agent registered
+[bluetooth]# agent on
+Agent is already registered
+[bluetooth]# default on
+Invalid command in menu main: default
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[bluetooth]# default-agent
+Default agent request successful
+[bluetooth]# power on
+Changing power on succeeded
+[bluetooth]# discoverable on
+Changing discoverable on succeeded
+[CHG] Controller A0:AF:BD:4E:D3:82 Discoverable: yes
+[bluetooth]# pairable on
+Changing pairable on succeeded
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Name: Sony PLAYSTATION(R)3 Controller
+[CHG] Device E0:AE:5E:96:44:05 Alias: Sony PLAYSTATION(R)3 Controller
+[CHG] Device E0:AE:5E:96:44:05 Modalias: usb:v054Cp0268d0000
+Authorize service
+[bluetooth]# [CHG] Device E0:AE:5E:96:44:05 Connected: no
+[bluetooth]# Request canceled
+[DEL] Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+[E0-AE-5E-96-44-05]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[bluetooth]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[E0-AE-5E-96-44-05]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[E0-AE-5E-96-44-05]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[E0-AE-5E-96-44-05]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Name: Sony PLAYSTATION(R)3 Controller
+[CHG] Device E0:AE:5E:96:44:05 Alias: Sony PLAYSTATION(R)3 Controller
+[CHG] Device E0:AE:5E:96:44:05 Modalias: usb:v054Cp0268d0000
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[bluetooth]# pairable on
+Changing pairable on succeeded
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[DEL] Device E0:AE:5E:96:44:05 E0-AE-5E-96-44-05
+[NEW] Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+Authorize service
+[agent] Authorize service 00001124-0000-1000-8000-00805f9b34fb (yes/no): [CHG] Device E0:AE:5E:96:44:05 Class: 0x00000508
+[agent] Authorize service 00001124-0000-1000-8000-00805f9b34fb (
+yes/no): [CHG] Device E0:AE:5E:96:44:05 Icon: input-gaming
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 Modalias: usb:v054Cp0268d0100
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 WakeCapable: yes
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[Sony PLAYSTATION(R)3 Controller]# [CHG] Device E0:AE:5E:96:44:05 ServicesResolved: yes
+[Sony PLAYSTATION(R)3 Controller]# yes
+[CHG] Device E0:AE:5E:96:44:05 Trusted: yes
+[CHG] Device E0:AE:5E:96:44:05 UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[CHG] Device E0:AE:5E:96:44:05 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[bluetooth]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[bluetooth]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[bluetooth]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[bluetooth]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[bluetooth]# devices
+Device 08:EB:ED:EB:35:2D Anker SoundCore
+Device 78:E1:03:82:ED:44 Echo Dot-VEL
+Device 20:9B:A5:A1:A1:CB Soundpeats Q30 Plus
+Device F3:40:72:16:7B:4C TICKR X ECC2
+Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+[bluetooth]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[bluetooth]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+[bluetooth]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.InProgress
+Request PIN code
+[agent] Enter PIN code: 0000
+[bluetooth]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.InProgress
+[bluetooth]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[bluetooth]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.InProgress
+[CHG] Controller A0:AF:BD:4E:D3:82 Discoverable: no
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[CHG] Device E0:AE:5E:96:44:05 ServicesResolved: no
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[CHG] Device E0:AE:5E:96:44:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Failed to pair: org.bluez.Error.InProgress
+Request PIN code
+1;39m[agent] Enter PIN code: 1234
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+Request PIN code
+1;39m[agent] Enter PIN code: 1234
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[Sony PLAYSTATION(R)3 Controller]# upower -i
+Invalid command in menu 
