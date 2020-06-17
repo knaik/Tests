@@ -1,0 +1,34 @@
+localhost ~ # bluetoothctl
+Agent registered
+[Sony PLAYSTATION(R)3 Controller]# devices
+Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+Device 08:EB:ED:EB:35:2D Anker SoundCore
+Device 78:E1:03:82:ED:44 Echo Dot-VEL
+Device 20:9B:A5:A1:A1:CB Soundpeats Q30 Plus
+Device F3:40:72:16:7B:4C TICKR X ECC2
+[Sony PLAYSTATION(R)3 Controller]# trust E0
+Device E0 not available
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Request PIN code
+[agent] Enter PIN code: 0000
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[CHG] Device E0:AE:5E:96:44:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Request PIN code
+1;39m[agent] Enter PIN code: 1234
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[Sony PLAYSTATION(R)3 Controller]# trust E0:AE:5E:96:44:05 
+Changing E0:AE:5E:96:44:05 trust succeeded
+[Sony PLAYSTATION(R)3 Controller]# pair E0:AE:5E:96:44:05 
+Attempting to pair with E0:AE:5E:96:44:05
+Request PIN code
+1;39m[agent] Enter PIN code: 9999
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[Sony PLAYSTATION(R)3 Controller]#                       
