@@ -1,0 +1,3 @@
+chromeos is based on gentoo but it really doesn't like letting me install git.
+trying to change root password is a nightmare passwd doesn't work right when trying to change the password
+it says it is locked. 
