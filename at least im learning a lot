@@ -1,0 +1,27 @@
+(xenial)karan@localhost:~$ sixpair
+Current Bluetooth master: a0:af:bd:4e:d3:82
+Setting master bd_addr to a0:af:bd:4e:d3:82
+(xenial)karan@localhost:~$ 
+
+
+localhost ~ # hciconfig -a
+hci0:   Type: Primary  Bus: USB
+        BD Address: A0:AF:BD:4E:D3:82  ACL MTU: 1021:4  SCO MTU: 96:6
+        UP RUNNING PSCAN 
+        RX bytes:282930 acl:1042 sco:0 events:7484 errors:0
+        TX bytes:104852 acl:1426 sco:0 commands:4226 errors:0
+        Features: 0xbf 0xfe 0x0f 0xfe 0xdb 0xff 0x7b 0x87
+        Packet type: DM1 DM3 DM5 DH1 DH3 DH5 HV1 HV2 HV3 
+        Link policy: RSWITCH SNIFF 
+        Link mode: SLAVE ACCEPT 
+        Name: 'Chromebook_43FB'
+        Class: 0x480104
+        Service Classes: Capturing, Telephony
+        Device Class: Computer, Desktop workstation
+        HCI Version: 4.2 (0x8)  Revision: 0x1100
+        LMP Version: 4.2 (0x8)  Subversion: 0x1100
+        Manufacturer: Intel Corp. (2)
+
+localhost ~ # 
+
+by all accounts it should be paired.
