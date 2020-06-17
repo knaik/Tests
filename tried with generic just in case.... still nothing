@@ -1,0 +1,75 @@
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+Request PIN code
+[S1;39m[agent] Enter PIN code: 1234
+Failed to pair: org.bluez.Error.AuthenticationFailed
+[Sony PLAYSTATION(R)3 Controller]# quit
+crosh> bt_console
+Agent registered
+[CHG] Device E0:AE:5E:96:44:05 Connected: no
+[bluetooth]# agent on
+Agent is already registered
+[bluetooth]# default-agent
+Default agent request successful
+[bluetooth]# power on
+Changing power on succeeded
+[bluetooth]# discoverable on
+Changing discoverable on succeeded
+[CHG] Controller A0:AF:BD:4E:D3:82 Discoverable: yes
+[bluetooth]# pairable on
+Changing pairable on succeeded
+[NEW] Device 00:18:00:22:F9:05 Sony PLAYSTATION(R)3 Controller
+Authorize service
+[b1;39m[agent] Authorize service 00001124-0000-1000-8000-00805f9b34fb (yes/no): yes
+[CHG] Device 00:18:00:22:F9:05 Trusted: yes
+[CHG] Device 00:18:00:22:F9:05 WakeCapable: yes
+[CHG] Device 00:18:00:22:F9:05 UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[CHG] Device 00:18:00:22:F9:05 Trusted: no
+Authorize service
+[b1;39m[agent] Authorize service 00001124-0000-1000-8000-00805f9b34fb (yes/no): yes
+[CHG] Device 00:18:00:22:F9:05 Trusted: yes
+[CHG] Device 00:18:00:22:F9:05 UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[bluetooth]# devices
+Device E0:AE:5E:96:44:05 Sony PLAYSTATION(R)3 Controller
+Device 08:EB:ED:EB:35:2D Anker SoundCore
+Device 78:E1:03:82:ED:44 Echo Dot-VEL
+Device 20:9B:A5:A1:A1:CB Soundpeats Q30 Plus
+Device F3:40:72:16:7B:4C TICKR X ECC2
+Device 00:18:00:22:F9:05 Sony PLAYSTATION(R)3 Controller
+[bluetooth]# trust 00:18:00:22:F9:05 
+Changing 00:18:00:22:F9:05 trust succeeded
+[CHG] Device 00:18:00:22:F9:05 Class: 0x00002508
+[CHG] Device 00:18:00:22:F9:05 Icon: input-gaming
+[CHG] Device 00:18:00:22:F9:05 Connected: yes
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: yes
+[CHG] Controller A0:AF:BD:4E:D3:82 Discovering: no
+[CHG] Device 00:18:00:22:F9:05 ServicesResolved: no
+[CHG] Device 00:18:00:22:F9:05 Connected: no
+[CHG] Device 00:18:00:22:F9:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# pair 00:18:00:22:F9:05 
+Attempting to pair with 00:18:00:22:F9:05
+Failed to pair: org.bluez.Error.AuthenticationTimeout
+[CHG] Device 00:18:00:22:F9:05 Connected: no
+[bluetooth]# pair 00:18:00:22:F9:05 
+Attempting to pair with 00:18:00:22:F9:05
+Failed to pair: org.bluez.Error.ConnectionAttemptFailed
+[CHG] Device 00:18:00:22:F9:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# pair 00:18:00:22:F9:05 
+Attempting to pair with 00:18:00:22:F9:05
+[CHG] Device 00:18:00:22:F9:05 Paired: yes
+Pairing successful
+[CHG] Device 00:18:00:22:F9:05 Connected: no
+[CHG] Device 00:18:00:22:F9:05 Connected: yes
+[Sony PLAYSTATION(R)3 Controller]# trust 00:18:00:22:F9:05 
+Changing 00:18:00:22:F9:05 trust succeeded
+[CHG] Controller A0:AF:BD:4E:D3:82 Discoverable: no
+[Sony PLAYSTATION(R)3 Controller]# pair 00:18:00:22:F9:05 
+Attempting to pair with 00:18:00:22:F9:05
+Failed to pair: org.bluez.Error.AlreadyExists
+[Sony PLAYSTATION(R)3 Controller]# yes
+Invalid command in menu main: yes
+
+Use "help" for a list of available commands in a menu.
+Use "menu <submenu>" if you want to enter any submenu.
+Use "back" if you want to return to menu main.
+[Sony PLAYSTATION(R)3 Controller]# yes
