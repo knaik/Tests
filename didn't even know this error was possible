@@ -1,0 +1,28 @@
+hunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unknown block device type "disk".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unknown block device type "disk".
+thunar-volman: There is no device with the sysfs path "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-2".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unknown block device type "disk".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unknown block device type "disk".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: There is no device with the sysfs path "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/host3/target3:0:0/3:0:0:0/block/sdd".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unknown block device type "disk".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: There is no device with the sysfs path "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0".
+thunar-volman: Unsupported USB device type "usb".
+thunar-volman: Unsupported USB device type "usb-storage".
+thunar-volman: Unknown block device type "disk".
